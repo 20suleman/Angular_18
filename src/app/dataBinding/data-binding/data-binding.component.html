@@ -1,0 +1,36 @@
+<h2>Product Details</h2>
+<dl>
+  <dt>Name</dt>
+  <dd><input type="text" value="{{ product.name }}" /></dd>
+  <dt>Price</dt>
+  <dd><input type="text" value="{{ product.price }}" /></dd>
+  <dt>Quantity</dt>
+  <dd><input type="text" value="{{ product.quantity }}" /></dd>
+  <dt>Manufacture</dt>
+  <dd>
+    {{ product.mfd.toLocaleDateString() }}
+  </dd>
+
+  <dt>Stock Status</dt>
+  <dd>
+    {{ product.Instock == true ? "Available" : "out of stock" }}
+  </dd>
+  <dt>Total</dt>
+  <dd>{{ product.quantity * product.price }}</dd>
+</dl>
+
+<h2>Property Binding</h2>
+<label for="customer-input"
+  >Type something: <input id="customer-input" #customerInput />{{
+    customerInput.value
+  }}
+</label>
+<input [type]="myTypeValue" />
+<br /><br />
+<input type="radio" name="typeValue" (change)="changeToText()" />Text
+<input
+  type="radio"
+  checked
+  name="typeValue"
+  (change)="changeToPassword()"
+/>Password

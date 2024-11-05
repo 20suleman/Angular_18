@@ -1,0 +1,35 @@
+<div class="container profileContainer">
+  <div class="row">
+    <div class="col-4">
+      <img [src]="employeeData.image" alt="" width="100%" height="300px" />
+    </div>
+    <div class="col-7">
+      <div [class]="rightPanel">
+        <h2>Employee Details</h2>
+        <dl>
+          <dt>Employee Name</dt>
+          <dd>{{ employeeData.empName }}</dd>
+          <dt>Employee Age</dt>
+          <dd>{{ employeeData.empAge }}</dd>
+          <dt>Employee Gender</dt>
+          <dd>{{ employeeData.empGender }}</dd>
+        </dl>
+        <input
+          type="radio"
+          checked
+          name="empName"
+          (change)="changeUser('suleman')"
+        /><label for="">Suleman</label>
+        <input
+          type="radio"
+          name="empName"
+          (change)="changeUser('shamoon')"
+        /><label for="">Shamoon</label> <br />
+        &nbsp; <input type="checkbox" (change)="changeTheme($event)" /><label
+          for=""
+          >{{ labelText }}</label
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div>
+  <h2>Register product</h2>
+
+  <dl>
+    <dt>Name</dt>
+    <dd><input type="text" [(ngModel)]="Name" /></dd>
+    <dt>Price</dt>
+    <dd><input type="text" [(ngModel)]="price" /></dd>
+    <dt>Is in Stock</dt>
+    <dd>
+      <input
+        type="radio"
+        name="stock"
+        value="Available"
+        [(ngModel)]="isInStock"
+      />Yes
+      <input
+        type="radio"
+        name="stock"
+        value="Not Available"
+        [(ngModel)]="isInStock"
+      />No
+    </dd>
+    <dt>Shipped to</dt>
+    <dd>
+      <select [(ngModel)]="shippedTo">
+        <option>Delhi</option>
+        <option>Hyderabad</option>
+        <option>Pune</option>
+      </select>
+    </dd>
+    <dt>Customer's address</dt>
+    <dd>
+      <input type="text" [(ngModel)]="custAddress" />
+    </dd>
+  </dl>
+</div>
+<div>
+  <h2>Product Details</h2>
+  <dl>
+    <dt>Name</dt>
+    <dd>{{ Name }}</dd>
+    <dt>Price</dt>
+    <dd>{{ price }}</dd>
+    <dt>Stock Status</dt>
+    <dd>{{ isInStock }}</dd>
+    <dt>Shipped to</dt>
+    <dd>{{ shippedTo }}</dd>
+    <dt>Addrees</dt>
+    <dd>{{ custAddress }}</dd>
+  </dl>
+</div>

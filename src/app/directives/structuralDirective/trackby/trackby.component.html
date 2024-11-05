@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="form-group">
+    <h2>Product List</h2>
+    <table class="table table-hover">
+      <thead>
+        <th>Name</th>
+        <th>price</th>
+        <th>Preview</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of product; trackBy: TrackById">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>
+            <img [src]="product.photo" w="70" height="70" alt="" />
+          </td>
+        </tr>
+        <div>
+          <button (click)="addProduct()" class="btn btn-primary">
+            Add new Product
+          </button>
+        </div>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="form-group">
+  <h2>Product catlog</h2>
+  <div class="card-deck text-center">
+    <div class="card" *ngFor="let product of product">
+      <div class="card-header">
+        <h3>{{ product.name }}</h3>
+      </div>
+      <div class="card-body">
+        <img
+          [src]="product.photo"
+          width="200"
+          height="200"
+          class="img-thumbnail"
+        />
+      </div>
+      <div class="card-footer">
+        <h3>&#8377;{{ product.price }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

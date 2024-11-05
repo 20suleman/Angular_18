@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Product details</h2>
+  <dl>
+    <dt>Name</dt>
+    <dd>{{ product.name }}</dd>
+    <dt>Price</dt>
+    <dd>{{ product.price }}</dd>
+    <dt>
+      <button (click)="displayCheck()">preview ->{{ btnText }}</button>
+    </dt>
+    <dd>
+      <div *ngIf="isVisible">
+        <img
+          [src]="product.photo"
+          width="200"
+          height="200"
+          class="img-thumbnail"
+        />
+      </div>
+    </dd>
+  </dl>
+</div>
+<div class="container">
+  <app-ng-for-nested></app-ng-for-nested>
+  <app-trackby></app-trackby>
+</div>

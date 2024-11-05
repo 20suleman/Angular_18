@@ -1,0 +1,23 @@
+<div>
+  <h2>Product List</h2>
+  <dl>
+    <div *ngFor="let item of data">
+      <dt>
+        {{ item.category }}
+      </dt>
+      <dd *ngFor="let product of item.product">
+        {{ product }}
+      </dd>
+    </div>
+  </dl>
+  <!-- category-product.component.html -->
+  <!-- <dl>
+    <div *ngFor="let item of data">
+      <dt>{{ item.category }}</dt>
+
+      <dd *ngFor="let product of item.product">
+        {{ product }}
+      </dd>
+    </div>
+  </dl> -->
+</div>
